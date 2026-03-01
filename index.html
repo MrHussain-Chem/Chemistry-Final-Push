@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GCSE AQA Chemistry – Final Push Revision Pack</title>
+<style>
+  :root{--primary:#1a3a5c;--secondary:#e8f0fb;--accent:#2e7d32;--border:#cdd8e8;--correct:#2e7d32;--wrong:#c62828;--ht-bg:#f3e5f5;--ht:#6a1b9a;--ft-bg:#e3f2fd;--ft:#1565c0}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f4fa;color:#1a1a2e}
+  header{background:var(--primary);color:#fff;padding:26px 24px 18px;text-align:center}
+  header h1{font-size:1.65rem;margin-bottom:6px}
+  header p{font-size:.93rem;opacity:.85}
+  .badges{display:flex;gap:10px;justify-content:center;margin-top:12px;flex-wrap:wrap}
+  .badge{padding:4px 14px;border-radius:20px;font-size:.8rem;font-weight:600}
+  .badge-ft{background:#bbdefb;color:#0d47a1}
+  .badge-ht{background:#e1bee7;color:#4a148c}
+  .badge-both{background:#c8e6c9;color:#1b5e20}
+  nav{background:#fff;border-bottom:2px solid var(--border);padding:10px 14px;display:flex;gap:7px;flex-wrap:wrap;justify-content:center;position:sticky;top:0;z-index:100;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+  nav button{padding:7px 13px;border:2px solid var(--border);border-radius:20px;background:#f5f7fa;cursor:pointer;font-size:.78rem;font-weight:600;color:var(--primary);transition:all .2s}
+  nav button:hover,nav button.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+  main{max-width:860px;margin:0 auto;padding:22px 16px 60px}
+  .section{display:none}
+  .section.active{display:block}
+  .tt-intro{background:#fff3e0;border-left:4px solid #e65100;padding:14px 18px;border-radius:6px;margin-bottom:18px;font-size:.93rem}
+  .tt-intro strong{color:#e65100}
+  table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+  th{background:var(--primary);color:#fff;padding:11px 13px;text-align:left;font-size:.86rem}
+  td{padding:10px 13px;border-bottom:1px solid var(--border);font-size:.86rem;vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:var(--secondary)}
+  .easter-row td{background:#fff8e1;font-style:italic}
+  .no-rev td{background:#fce4ec;color:#880e4f;font-weight:600}
+  .wk{color:var(--primary);text-decoration:underline;cursor:pointer;font-weight:600}
+  .wk:hover{color:#2e7d32}
+  .tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:13px;margin-top:16px}
+  .tip-card{background:#fff;border-radius:10px;padding:15px;box-shadow:0 2px 8px rgba(0,0,0,.07);border-top:4px solid}
+  .tip-card h4{font-size:.93rem;margin-bottom:5px}
+  .tip-card p{font-size:.82rem;color:#444;line-height:1.5}
+  .tip1{border-color:#1a3a5c}.tip2{border-color:#2e7d32}.tip3{border-color:#e65100}.tip4{border-color:#6a1b9a}
+  .wk-hdr{color:#fff;border-radius:10px 10px 0 0;padding:16px 20px;margin-top:8px}
+  .wk-hdr h2{font-size:1.15rem}
+  .wk-hdr p{font-size:.83rem;opacity:.85;margin-top:3px}
+  .wk-body{background:#fff;border-radius:0 0 10px 10px;padding:20px;box-shadow:0 3px 10px rgba(0,0,0,.08);margin-bottom:28px}
+  .tier{display:inline-block;padding:2px 10px;border-radius:12px;font-size:.73rem;font-weight:700;margin-left:6px;vertical-align:middle}
+  .ft{background:var(--ft-bg);color:var(--ft)}
+  .ht{background:var(--ht-bg);color:var(--ht)}
+  h3{font-size:.98rem;color:var(--primary);margin:16px 0 9px;border-bottom:2px solid var(--secondary);padding-bottom:4px}
+  .info{background:var(--secondary);border-left:4px solid var(--primary);border-radius:6px;padding:11px 15px;margin:10px 0;font-size:.86rem;line-height:1.65}
+  .formula{background:#fff8e1;border-left:4px solid #f9a825;border-radius:6px;padding:11px 15px;margin:10px 0;font-size:.88rem;font-weight:600;color:#4a3500}
+  .warn{background:#fff3e0;border-left:4px solid #e65100;border-radius:6px;padding:10px 14px;margin:10px 0;font-size:.83rem;color:#4e2900}
+  .ft-table{width:100%;border-collapse:collapse;margin:9px 0;font-size:.83rem}
+  .ft-table th{background:#e8f0fb;color:var(--primary);padding:8px 9px;text-align:left;border:1px solid var(--border)}
+  .ft-table td{border:1px solid var(--border);padding:6px 8px}
+  .ft-table input{width:100%;border:none;outline:none;background:#fafafe;font-size:.83rem;padding:2px 3px;border-radius:3px;border-bottom:2px solid #90caf9}
+  .ft-table input.ok{border-bottom-color:var(--correct);background:#e8f5e9}
+  .ft-table input.no{border-bottom-color:var(--wrong);background:#ffebee}
+  .mcq-opt{display:flex;align-items:center;gap:10px;padding:9px 13px;border:2px solid var(--border);border-radius:8px;margin:5px 0;cursor:pointer;font-size:.88rem;transition:all .2s;background:#fafbfc}
+  .mcq-opt:hover{border-color:var(--primary);background:var(--secondary)}
+  .mcq-opt.ok{border-color:var(--correct);background:#e8f5e9;color:var(--correct);font-weight:600}
+  .mcq-opt.no{border-color:var(--wrong);background:#ffebee;color:var(--wrong)}
+  .dot{width:17px;height:17px;border-radius:50%;border:2px solid var(--border);flex-shrink:0}
+  .mcq-opt.ok .dot{background:var(--correct);border-color:var(--correct)}
+  .mcq-opt.no .dot{background:var(--wrong);border-color:var(--wrong)}
+  .abox{width:100%;min-height:58px;border:2px solid var(--border);border-radius:8px;padding:9px;font-size:.87rem;font-family:inherit;resize:vertical}
+  .abox:focus{outline:none;border-color:var(--primary)}
+  .rev-btn{background:var(--primary);color:#fff;border:none;border-radius:6px;padding:8px 18px;cursor:pointer;font-size:.87rem;font-weight:600;margin-top:7px;transition:background .2s}
+  .rev-btn:hover{background:#274f7a}
+  .ms{background:#e8f5e9;border-left:4px solid var(--correct);border-radius:6px;padding:11px 15px;margin-top:9px;font-size:.85rem;display:none;line-height:1.6}
+  .ms.show{display:block}
+  .ms strong{color:var(--correct)}
+  .fc-area{display:flex;flex-wrap:wrap;gap:13px;margin:10px 0}
+  .fc{width:178px;height:108px;perspective:600px;cursor:pointer}
+  .fc-in{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform .5s}
+  .fc.flip .fc-in{transform:rotateY(180deg)}
+  .fc-f,.fc-b{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:10px;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;font-size:.8rem;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+  .fc-f{background:var(--primary);color:#fff}
+  .fc-b{background:#e8f5e9;color:#1b5e20;transform:rotateY(180deg)}
+  .fc-hint{font-size:.74rem;color:#888;margin-bottom:8px}
+  .chk{background:#2e7d32;color:#fff;border:none;border-radius:6px;padding:9px 20px;cursor:pointer;font-size:.88rem;font-weight:700;margin-top:11px;transition:background .2s}
+  .chk:hover{background:#1b5e20}
+  .score{display:inline-block;margin-left:13px;font-weight:700;font-size:.93rem}
+  .mk{float:right;background:#e0e0e0;border-radius:10px;padding:2px 9px;font-size:.77rem;font-weight:700;color:#333}
+  .qn{font-size:.87rem;font-weight:600;margin:13px 0 6px}
+  .worked{background:#f1f8e9;border-left:4px solid #558b2f;border-radius:6px;padding:12px 16px;margin:10px 0;font-size:.86rem;line-height:1.7}
+  .worked strong{color:#33691e}
+  .worked .step{color:#1b5e20;font-weight:600}
+  .rp-badge{display:inline-block;background:#ff6f00;color:#fff;padding:2px 10px;border-radius:12px;font-size:.73rem;font-weight:700;margin-left:6px}
+  .reactivity-tower{display:flex;flex-direction:column;gap:2px;max-width:320px;margin:12px 0}
+  .reactivity-tower .rt-row{display:flex;align-items:center;padding:7px 14px;border-radius:6px;font-size:.84rem;font-weight:600}
+  .reactivity-tower .rt-label{width:32px;text-align:center;margin-right:10px;font-size:.78rem;color:#fff;background:rgba(0,0,0,.15);border-radius:4px;padding:2px 4px}
+  .rt-high{background:#c62828;color:#fff}
+  .rt-mid{background:#f57f17;color:#fff}
+  .rt-low{background:#2e7d32;color:#fff}
+  .rt-carbon{background:#37474f;color:#fff;border:2px dashed #90a4ae}
+  .rt-hydrogen{background:#0277bd;color:#fff;border:2px dashed #4fc3f7}
+  @media(max-width:600px){header h1{font-size:1.25rem}.fc{width:140px;height:88px}.ft-table{font-size:.75rem}}
+</style>
+</head>
+<body>
+<header>
+  <h1>⚗️ GCSE AQA Chemistry – Final Push Revision Pack</h1>
+  <p>Combined Science: Trilogy (8464) &amp; Separate Chemistry (8462) | Targeting Grade 4/5</p>
+  <div class="badges">
+    <span class="badge badge-ft">FT Foundation</span>
+    <span class="badge badge-ht">HT Higher only</span>
+    <span class="badge badge-both">Both Tiers</span>
+  </div>
+</header>
+<nav id="topnav">
+  <button class="active" onclick="show('tt',this)">📅 Timetable</button>
+  <button onclick="show('tips',this)">💡 Tips</button>
+  <button onclick="show('w1',this)">W1 Atoms</button>
+  <button onclick="show('w2',this)">W2 Bonding</button>
+  <button onclick="show('w3',this)">W3 Equations</button>
+  <button onclick="show('w4',this)">W4 Quantitative</button>
+  <button onclick="show('w5',this)">W5 Acids</button>
+  <button onclick="show('w6',this)">W6 Reactivity</button>
+  <button onclick="show('w7',this)">W7 Rates</button>
+  <button onclick="show('w8',this)">W8 Electrolysis</button>
+  <button onclick="show('w9',this)">W9 Organic</button>
+  <button onclick="show('rp',this)" style="border-color:#ff6f00;color:#ff6f00">🔬 Required Practicals</button>
+</nav>
+<main>
+
+<!-- TIMETABLE -->
+<div class="section active" id="tt">
+  <div class="tt-intro">
+    <strong>📌 Plan:</strong> Until Easter → Paper 1 topics (8–12) &nbsp;|&nbsp; After Easter → Paper 2 topics (13–17)<br>
+    Click any underlined topic to jump straight to that week's activities.
+  </div>
+  <table>
+    <tr><th>Week beginning</th><th>Tuesday revision topic</th><th>Independent revision topic</th></tr>
+    <tr><td>2nd March</td><td><span class="wk" onclick="show('w1',null)">Atomic Structure &amp; the Periodic Table</span></td><td><span class="wk" onclick="show('w1',null)">Electronic configuration &amp; ion formation</span></td></tr>
+    <tr><td>9th March</td><td><span class="wk" onclick="show('w2',null)">Ionic &amp; Covalent Bonding</span></td><td><span class="wk" onclick="show('w3',null)">Balancing equations</span></td></tr>
+    <tr><td>16th March</td><td><span class="wk" onclick="show('w4',null)">Quantitative Chemistry</span> <span class="tier ft">FT: Mr only</span><span class="tier ht">HT: + Moles</span></td><td><span class="wk" onclick="show('w3',null)">Balancing equations practice</span></td></tr>
+    <tr class="no-rev"><td>23rd March</td><td>⛔ No revision this week</td><td><span class="wk" onclick="show('w5',null)">Acids, Bases &amp; Neutralisation</span></td></tr>
+    <tr class="easter-row"><td>Easter Holiday</td><td></td><td><span class="wk" onclick="show('w6',null)">Reactivity Series &amp; Displacement</span></td></tr>
+    <tr class="easter-row"><td></td><td></td><td>Metal extraction (reduction with carbon / electrolysis)</td></tr>
+    <tr><td>13th April</td><td><span class="wk" onclick="show('w7',null)">Rates of Reaction</span></td><td><span class="wk" onclick="show('w7',null)">Rates required practical</span></td></tr>
+    <tr><td>20th April</td><td><span class="wk" onclick="show('w8',null)">Electrolysis</span></td><td>Separate only: Transition metals &amp; alloys</td></tr>
+    <tr><td>27th April</td><td><span class="wk" onclick="show('w9',null)">Organic Chemistry – crude oil</span></td><td>Separate only: Polymers &amp; atmosphere</td></tr>
+  </table>
+</div>
+
+<!-- TIPS -->
+<div class="section" id="tips">
+  <div class="wk-hdr" style="background:var(--primary)"><h2>💡 Revision Tips – Make It Stick!</h2><p>Passive reading is NOT enough. You need to actively retrieve information.</p></div>
+  <div class="wk-body">
+    <div class="tips-grid">
+      <div class="tip-card tip1"><h4>🃏 Flashcards</h4><p>Write a question on one side, answer on the other. Cover and test yourself — don't just re-read them.</p></div>
+      <div class="tip-card tip2"><h4>✍️ Retrieval Practice</h4><p>Close your notes. Write down everything you can remember. Then check and fill the gaps in a different colour.</p></div>
+      <div class="tip-card tip3"><h4>📝 Past Paper Questions</h4><p>Use the AQA mark scheme. Understand <em>why</em> an answer gets marks — look out for key words the examiner expects.</p></div>
+      <div class="tip-card tip4"><h4>🗣️ Teach It Back</h4><p>Explain a topic out loud as if teaching someone. Getting stuck tells you exactly what to revise next.</p></div>
+    </div>
+    <div class="info" style="margin-top:18px;"><strong>Each week in this pack:</strong> ✅ Spec-checked key facts &nbsp;|&nbsp; ✅ Fill-in activities with instant feedback &nbsp;|&nbsp; ✅ Worked examples &nbsp;|&nbsp; ✅ Exam-style questions with mark schemes &nbsp;|&nbsp; 🔬 Required practical links</div>
+
+    <div style="margin-top:22px;"></div>
+    <div class="wk-hdr" style="background:#2e7d32;border-radius:10px 10px 0 0;margin-top:0"><h2>📣 Mr Hussain's Recommended Revision Strategy</h2><p>Follow this system and you WILL see improvement — it's about doing the right things consistently.</p></div>
+    <div class="wk-body" style="border-radius:0 0 10px 10px;border-top:none">
+
+      <h3>📝 Step 1 – Build Your Summary Sheets</h3>
+      <div class="info">
+        For each topic (e.g. Atomic Structure, Bonding, etc.) summarise the important content onto a <strong>double-sided sheet of paper</strong>. Use the revision website below as your source:<br><br>
+        🔗 <a href="https://mrhussain-chem.github.io/Y11-COMB-Mock-Revision/" target="_blank" style="color:var(--primary);font-weight:700">mrhussain-chem.github.io/Y11-COMB-Mock-Revision/</a><br><br>
+        If your summary sheet is effective, it should help you answer the questions in the <strong>homework booklet</strong> on that topic. If you get questions wrong, go back and <strong>amend your sheet</strong> using the correct language from the mark scheme. This is how you build an accurate, exam-ready set of notes.
+      </div>
+
+      <h3>🧠 Step 2 – Learn the Sheet</h3>
+      <div class="info">
+        <strong>Read and write</strong> the information out loud <strong>3 times</strong>, then put the sheet away and try to <strong>write it from memory 3 times</strong>. Check each attempt and correct any gaps. This is retrieval practice — the most effective way to move information into long-term memory.
+      </div>
+
+      <h3>🃏 Step 3 – Flashcards for Definitions</h3>
+      <div class="info">
+        Things like definitions (e.g. what is an atom? what is an ion? what is a mixture?) should go on <strong>flashcards</strong>, not on the summary sheet. Learn them by:<br><br>
+        ✅ Using them <strong>daily</strong> until you can get the answer correct <strong>word for word</strong><br>
+        ✅ Once correct for <strong>3–4 days in a row</strong>, set them aside<br>
+        ✅ <strong>Revisit after 1–2 weeks</strong> to check they've stuck<br><br>
+        This spacing technique is how your brain locks in information for the long term.
+      </div>
+
+      <h3>📖 Step 4 – Practice Questions from Lessons</h3>
+      <div class="info">
+        Redo the questions you've completed in lessons <strong>as often as you can</strong>. If there are parts that don't quite make sense, <strong>reach out</strong> — you can:<br><br>
+        📧 Email Mr Hussain<br>
+        🙋 Ask during lessons<br>
+        📚 Come to afterschool sessions on <strong>Tuesday</strong><br><br>
+        Don't sit with confusion — ask and we'll go through it together.
+      </div>
+
+      <h3>⏱️ How Much Time?</h3>
+      <div class="warn" style="font-size:.88rem">
+        <strong>Minimum target: 1 hour per week on chemistry.</strong><br><br>
+        As a guide, for every 1 hour of chemistry in school, aim for <strong>1 hour at home</strong> doing something from the steps above. So if you had 1 lesson of chemistry during Week B, then 1 hour at home should suffice.<br><br>
+        💡 <strong>Top tip:</strong> Try to do your revision on the <strong>same day</strong> as your chemistry lesson — the content will be freshest in your mind and most memorable.
+      </div>
+
+      <h3>🎯 Where Do I Start?</h3>
+      <div class="info" style="background:#fff3e0;border-left-color:#e65100;">
+        <strong>Don't guess — use evidence!</strong><br><br>
+        📋 Look through your <strong>previous assessments from Year 9 to now</strong> and note down the weakest areas — <strong>these are your priorities!</strong><br><br>
+        You can also try this diagnostic quiz to identify your weak spots:<br>
+        🔗 <a href="https://www.proprofs.com/quiz-school/story.php?title=gcse-chemistry-test-higher-tier-grade-8-9" target="_blank" style="color:#e65100;font-weight:700">GCSE Chemistry Diagnostic Quiz</a><br><br>
+        ⚠️ You will need to press <strong>Complete</strong> or run out of the allocated time, then <strong>note down your areas of weakness</strong>. Focus your revision there first.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- W1: ATOMS -->
+<div class="section" id="w1">
+  <div class="wk-hdr" style="background:#1a3a5c"><h2>Week 1 – Atomic Structure &amp; Electronic Configuration</h2><p>Paper 1 | Topic 8 (Combined) | Both tiers</p></div>
+  <div class="wk-body">
+    <div class="info">
+      ⚛️ <strong>Key spec facts (all students):</strong><br>
+      • All substances are made of <strong>atoms</strong>. Atoms of each element have a unique chemical symbol.<br>
+      • An atom has a nucleus containing <strong>protons (+1)</strong> and <strong>neutrons (0)</strong>, surrounded by <strong>electrons (−1)</strong> in shells (energy levels).<br>
+      • <strong>Atomic number</strong> = number of protons. In a neutral atom, number of electrons = number of protons.<br>
+      • <strong>Mass number</strong> = protons + neutrons. Number of neutrons = mass number − atomic number.<br>
+      • Electrons occupy the lowest available energy levels first. Shell 1 holds max <strong>2</strong>, shell 2 holds max <strong>8</strong>, shell 3 holds max <strong>8</strong>.<br>
+      • Elements in the same <strong>group</strong> have the same number of electrons in their outer shell → similar chemical properties.<br>
+      • <strong>Isotopes</strong> are atoms of the same element with the same number of protons but different numbers of neutrons.
+    </div>
+    <h3>📋 Task 1 – Complete the table <span class="tier ft">FT</span><span class="tier ht">HT</span></h3>
+    <p style="font-size:.82rem;color:#666;margin-bottom:7px;">Fill in each cell then click <strong>Check Answers</strong>. Electronic configurations: write as e.g. 2,8,1</p>
+    <table class="ft-table" id="atomT">
+      <tr><th>Element</th><th>Atomic No.</th><th>Protons</th><th>Electrons</th><th>Neutrons</th><th>Electronic config.</th></tr>
+      <tr><td>Hydrogen (H)</td><td>1</td><td><input data-ans="1"></td><td><input data-ans="1"></td><td>0 <small>(Mr=1)</small></td><td><input data-ans="1"></td></tr>
+      <tr><td>Carbon (C)</td><td>6</td><td><input data-ans="6"></td><td><input data-ans="6"></td><td>6 <small>(Mr=12)</small></td><td><input data-ans="2,4"></td></tr>
+      <tr><td>Oxygen (O)</td><td>8</td><td><input data-ans="8"></td><td><input data-ans="8"></td><td>8 <small>(Mr=16)</small></td><td><input data-ans="2,6"></td></tr>
+      <tr><td>Sodium (Na)</td><td>11</td><td><input data-ans="11"></td><td><input data-ans="11"></td><td>12 <small>(Mr=23)</small></td><td><input data-ans="2,8,1"></td></tr>
+      <tr><td>Chlorine (Cl)</td><td>17</td><td><input data-ans="17"></td><td><input data-ans="17"></td><td>18 <small>(Mr=35)</small></td><td><input data-ans="2,8,7"></td></tr>
+      <tr><td>Calcium (Ca)</td><td>20</td><td><input data-ans="20"></td><td><input data-ans="20"></td><td>20 <small>(Mr=40)</small></td><td><input data-ans="2,8,8,2"></td></tr>
+    </table>
+    <button class="chk" onclick="checkT('atomT')">Check Answers</button> <span class="score" id="atomTSc"></span>
+
+    <h3>🃏 Ion Formation Flashcards <span class="tier ft">FT</span><span class="tier ht">HT</span></h3>
+    <p class="fc-hint">Click each card to flip it!</p>
+    <div class="fc-area">
+      <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-in"><div class="fc-f">What charge does Na form, and why?</div><div class="fc-b">Na⁺ — loses 1 electron from outer shell (2,8,1 → 2,8). Metal atoms lose electrons to form positive ions.</div></div></div>
+      <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-in"><div class="fc-f">What charge does Cl form, and why?</div><div class="fc-b">Cl⁻ — gains 1 electron to fill outer shell (2,8,7 → 2,8,8). Non-metal atoms gain electrons to form negative ions.</div></div></div>
+      <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-in"><div class="fc-f">What charge does Ca form, and why?</div><div class="fc-b">Ca²⁺ — loses 2 electrons from outer shell (2,8,8,2 → 2,8,8). Group 2 metals form 2+ ions.</div></div></div>
+      <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-in"><div class="fc-f">What charge does O form, and why?</div><div class="fc-b">O²⁻ — gains 2 electrons to fill outer shell (2,6 → 2,8). Group 6 non-metals form 2− ions.</div></div></div>
+    </div>
+    <div class="warn">⚠️ <strong>Examiner tip:</strong> The charge on an ion from a Group 1 or 2 metal = group number (e.g. Group 2 → 2+). The charge on an ion from a Group 6 or 7 non-metal = 8 − group number (e.g. Group 6 → 2−, Group 7 → 1−).</div>
+
+    <h3>📝 Extra Exam-style Questions</h3>
+    <p class="qn"><span class="mk">(2 marks)</span>(a) Chlorine has two main isotopes: Cl-35 and Cl-37. Explain what is meant by the term isotope using chlorine as an example.</p>
+    <textarea class="abox" id="at_q1" placeholder="Your answer..."></textarea>
+    <button class="rev-btn" onclick="tog('at_ms1')">Show Mark Scheme</button>
+    <div class="ms" id="at_ms1"><strong>✅</strong> Isotopes are atoms of the same element with the same number of protons ✓ but different numbers of neutrons ✓. Cl-35 has 18 neutrons and Cl-37 has 20 neutrons, but both have 17 protons.</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(b) An atom of aluminium has an atomic number of 13 and a mass number of 27. Determine its electronic configuration and the number of neutrons.</p>
+    <textarea class="abox" id="at_q2" placeholder="Electronic config + neutrons..."></textarea>
+    <button class="rev-btn" onclick="tog('at_ms2')">Show Mark Scheme</button>
+    <div class="ms" id="at_ms2"><strong>✅</strong> Electronic configuration: 2, 8, 3 ✓<br>Neutrons = 27 − 13 = <strong>14 neutrons</strong> ✓</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(c) Potassium (K) is in Group 1 and sodium (Na) is also in Group 1. Explain why they have similar chemical properties.</p>
+    <textarea class="abox" id="at_q3" placeholder="Your explanation..."></textarea>
+    <button class="rev-btn" onclick="tog('at_ms3')">Show Mark Scheme</button>
+    <div class="ms" id="at_ms3"><strong>✅</strong> They are in the same group ✓ so they have the same number of electrons in their outer shell (both have 1 outer electron) ✓. The number of electrons in the outer shell determines chemical properties.</div>
+  </div>
+</div>
+
+<!-- W2: BONDING -->
+<div class="section" id="w2">
+  <div class="wk-hdr" style="background:#00695c"><h2>Week 2 – Ionic &amp; Covalent Bonding</h2><p>Paper 1 | Topic 9 (Combined) | Both tiers</p></div>
+  <div class="wk-body">
+    <div class="info">
+      🔗 <strong>Key spec facts:</strong><br>
+      <strong>Ionic bonding:</strong> occurs between a metal and a non-metal. Metal atoms <strong>lose</strong> electrons → positive ions. Non-metal atoms <strong>gain</strong> electrons → negative ions. Ions are held together by <strong>strong electrostatic forces of attraction between oppositely charged ions</strong> in all directions — this is ionic bonding. Ionic compounds have <strong>giant ionic lattice</strong> structures with high melting and boiling points. When melted or dissolved in water, they <strong>conduct electricity</strong> because ions are free to move.<br><br>
+      <strong>Covalent bonding:</strong> occurs between non-metal atoms that <strong>share pairs of electrons</strong>. These bonds are strong. Small covalently bonded molecules (e.g. H₂O, CO₂) have <strong>weak intermolecular forces</strong> so have low melting/boiling points and do <strong>not</strong> conduct electricity.
+    </div>
+
+    <h3>📝 Ionic vs Covalent – MCQ practice</h3>
+    <p class="qn"><span class="mk">(1 mark)</span>(a) Sodium chloride (NaCl) is an ionic compound. Which statement best describes why it has a high melting point?</p>
+    <div id="mc_b1">
+      <div class="mcq-opt" onclick="mcq(this,'b1',false)"><div class="dot"></div>It has strong covalent bonds between atoms</div>
+      <div class="mcq-opt" onclick="mcq(this,'b1',true)"><div class="dot"></div>There are strong electrostatic forces of attraction between oppositely charged ions in all directions</div>
+      <div class="mcq-opt" onclick="mcq(this,'b1',false)"><div class="dot"></div>It has a simple molecular structure with weak intermolecular forces</div>
+    </div>
+
+    <p class="qn"><span class="mk">(1 mark)</span>(b) Why can molten sodium chloride conduct electricity but solid sodium chloride cannot?</p>
+    <textarea class="abox" id="b_q2" style="min-height:50px" placeholder="Your answer..."></textarea>
+    <button class="rev-btn" onclick="tog('b_ms2')">Show Mark Scheme</button>
+    <div class="ms" id="b_ms2"><strong>✅</strong> In the solid the ions are held in fixed positions in the lattice and cannot move ✓. When molten, the ions are free to move ✓ and so can carry electrical charge through the liquid.</div>
+
+    <p class="qn"><span class="mk">(1 mark)</span>(c) Water (H₂O) has a much lower boiling point than sodium chloride. Explain why.</p>
+    <textarea class="abox" id="b_q3" style="min-height:55px" placeholder="Your answer..."></textarea>
+    <button class="rev-btn" onclick="tog('b_ms3')">Show Mark Scheme</button>
+    <div class="ms" id="b_ms3"><strong>✅</strong> Water consists of small molecules with <strong>weak intermolecular forces</strong> between them ✓. Only these weak intermolecular forces need to be overcome to boil water (not the strong covalent bonds) ✓. Sodium chloride has strong electrostatic forces between ions which require much more energy to break.</div>
+
+    <h3>🃏 Bonding Flashcards</h3>
+    <p class="fc-hint">Click to flip!</p>
+    <div class="fc-area">
+      <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-in"><div class="fc-f">What type of bonding is in NaCl?</div><div class="fc-b">Ionic bonding — metal + non-metal. Strong electrostatic forces between Na⁺ and Cl⁻ ions in a giant ionic lattice.</div></div></div>
+      <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-in"><div class="fc-f">What type of bonding is in water (H₂O)?</div><div class="fc-b">Covalent bonding — non-metals sharing pairs of electrons. Small molecule with weak intermolecular forces.</div></div></div>
+      <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-in"><div class="fc-f">What are delocalised electrons?</div><div class="fc-b">Electrons free to move throughout the whole metal structure. They allow metals to conduct electricity and thermal energy.</div></div></div>
+    </div>
+
+    <h3>📝 Extra Exam-style Questions</h3>
+    <p class="qn"><span class="mk">(2 marks)</span>(d) Diamond and graphite are both forms of carbon. Diamond does not conduct electricity but graphite does. Explain why graphite conducts electricity.</p>
+    <textarea class="abox" id="b_q4" placeholder="Your explanation..."></textarea>
+    <button class="rev-btn" onclick="tog('b_ms4')">Show Mark Scheme</button>
+    <div class="ms" id="b_ms4"><strong>✅</strong> In graphite, each carbon atom only bonds to three other carbon atoms ✓, leaving one electron per atom delocalised / free to move ✓. These delocalised electrons can carry electrical charge through the structure.</div>
+
+    <p class="qn"><span class="mk">(3 marks)</span>(e) A student has two unknown white solids, X and Y. Solid X has a melting point of 801°C and conducts electricity when dissolved in water. Solid Y has a melting point of 43°C and does not conduct electricity. Identify the type of structure and bonding for each solid.</p>
+    <textarea class="abox" id="b_q5" placeholder="Solid X: ...&#10;Solid Y: ..."></textarea>
+    <button class="rev-btn" onclick="tog('b_ms5')">Show Mark Scheme</button>
+    <div class="ms" id="b_ms5"><strong>✅</strong> Solid X: giant ionic lattice / ionic bonding ✓ — high melting point because of strong electrostatic forces; conducts when dissolved because ions are free to move.<br>Solid Y: simple (covalent) molecular structure ✓ — low melting point because intermolecular forces are weak ✓. Does not conduct because there are no free ions or electrons.</div>
+  </div>
+</div>
+
+<!-- W3: EQUATIONS -->
+<div class="section" id="w3">
+  <div class="wk-hdr" style="background:#4527a0"><h2>Week 3 – Balancing Symbol Equations</h2><p>Paper 1 | Topic 8 (Combined) | Both tiers</p></div>
+  <div class="wk-body">
+    <div class="info">⚖️ <strong>Key rule (law of conservation of mass):</strong> No atoms are lost or made during a chemical reaction — the mass of products equals the mass of reactants. Equations must be balanced: same number of atoms of each element on both sides. You can only change the <strong>large numbers (coefficients)</strong> in front of formulae — never change the small subscript numbers inside a formula.</div>
+
+    <h3>📋 Task 1 – Balance these equations (Foundation)</h3>
+    <p style="font-size:.82rem;color:#666;margin-bottom:7px;">Enter the missing coefficient. Type 1 if no number is needed.</p>
+    <table class="ft-table" id="eqT">
+      <tr><th>#</th><th>Equation</th><th>Missing number</th></tr>
+      <tr><td>1</td><td>___ H₂ + O₂ → 2 H₂O</td><td><input data-ans="2"></td></tr>
+      <tr><td>2</td><td>2 Na + ___ Cl₂ → 2 NaCl</td><td><input data-ans="1"></td></tr>
+      <tr><td>3</td><td>Mg + 2 HCl → MgCl₂ + ___ H₂</td><td><input data-ans="1"></td></tr>
+      <tr><td>4</td><td>4 Fe + ___ O₂ → 2 Fe₂O₃</td><td><input data-ans="3"></td></tr>
+      <tr><td>5</td><td>___ CaCO₃ → CaO + CO₂</td><td><input data-ans="1"></td></tr>
+      <tr><td>6</td><td>___ Mg + O₂ → 2 MgO</td><td><input data-ans="2"></td></tr>
+    </table>
+    <button class="chk" onclick="checkT('eqT')">Check Answers</button> <span class="score" id="eqTSc"></span>
+
+    <h3>📋 Task 2 – Harder balancing <span class="tier ht">HT</span></h3>
+    <table class="ft-table" id="eqT2">
+      <tr><th>#</th><th>Equation</th><th>Missing number</th></tr>
+      <tr><td>7</td><td>___ Al + 3 Cl₂ → 2 AlCl₃</td><td><input data-ans="2"></td></tr>
+      <tr><td>8</td><td>Fe₂O₃ + ___ CO → 2 Fe + 3 CO₂</td><td><input data-ans="3"></td></tr>
+      <tr><td>9</td><td>___ Na + 2 H₂O → 2 NaOH + H₂</td><td><input data-ans="2"></td></tr>
+      <tr><td>10</td><td>CH₄ + ___ O₂ → CO₂ + 2 H₂O</td><td><input data-ans="2"></td></tr>
+      <tr><td>11</td><td>2 C₂H₆ + ___ O₂ → 4 CO₂ + 6 H₂O</td><td><input data-ans="7"></td></tr>
+      <tr><td>12</td><td>___ NaOH + H₂SO₄ → Na₂SO₄ + 2 H₂O</td><td><input data-ans="2"></td></tr>
+    </table>
+    <button class="chk" onclick="checkT('eqT2')">Check Answers</button> <span class="score" id="eqT2Sc"></span>
+
+    <h3>📝 Exam-style Questions</h3>
+    <p class="qn"><span class="mk">(2 marks)</span>(a) Write the balanced symbol equation for: <strong>magnesium + hydrochloric acid → magnesium chloride + hydrogen</strong></p>
+    <textarea class="abox" id="eq_q1" style="min-height:45px" placeholder="Symbol equation..."></textarea>
+    <button class="rev-btn" onclick="tog('eq_ms1')">Show Mark Scheme</button>
+    <div class="ms" id="eq_ms1"><strong>✅ Mg + 2HCl → MgCl₂ + H₂</strong><br>1 mark: correct formulae for all reactants and products. 1 mark: correctly balanced.</div>
+
+    <p class="qn"><span class="mk">(1 mark)</span>(b) State symbols can be added to equations. What does (aq) mean?</p>
+    <div id="mc_eq">
+      <div class="mcq-opt" onclick="mcq(this,'eq',false)"><div class="dot"></div>A liquid</div>
+      <div class="mcq-opt" onclick="mcq(this,'eq',true)"><div class="dot"></div>Dissolved in water (aqueous solution)</div>
+      <div class="mcq-opt" onclick="mcq(this,'eq',false)"><div class="dot"></div>A gas</div>
+    </div>
+
+    <p class="qn"><span class="mk">(3 marks)</span>(c) 10 g of calcium carbonate (CaCO₃) is heated and decomposes into calcium oxide (CaO) and carbon dioxide (CO₂). The calcium oxide produced has a mass of 5.6 g. Calculate the mass of carbon dioxide produced. Explain how the law of conservation of mass applies here.</p>
+    <textarea class="abox" id="eq_q2" style="min-height:65px" placeholder="Calculation and explanation..."></textarea>
+    <button class="rev-btn" onclick="tog('eq_ms2')">Show Mark Scheme</button>
+    <div class="ms" id="eq_ms2"><strong>✅</strong> Mass of CO₂ = 10 − 5.6 = <strong>4.4 g</strong> ✓<br>No atoms are created or destroyed in a chemical reaction ✓, so the total mass of products equals the total mass of reactants ✓.</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(d) Write the balanced symbol equation for the complete combustion of methane (CH₄). Include state symbols.</p>
+    <textarea class="abox" id="eq_q3" style="min-height:45px" placeholder="Symbol equation with state symbols..."></textarea>
+    <button class="rev-btn" onclick="tog('eq_ms3')">Show Mark Scheme</button>
+    <div class="ms" id="eq_ms3"><strong>✅ CH₄(g) + 2O₂(g) → CO₂(g) + 2H₂O(l)</strong><br>1 mark: balanced equation. 1 mark: all four state symbols correct. State symbols: (s) solid, (l) liquid, (g) gas, (aq) aqueous.</div>
+  </div>
+</div>
+
+<!-- W4: QUANTITATIVE -->
+<div class="section" id="w4">
+  <div class="wk-hdr" style="background:#b71c1c"><h2>Week 4 – Quantitative Chemistry</h2><p>Paper 1 | Topic 10 (Combined) | Mr = both tiers | Moles = HT only</p></div>
+  <div class="wk-body">
+    <div class="formula">
+      📐 <strong>Relative formula mass (Mr)</strong> = sum of all the atomic masses in the formula &nbsp;<span class="tier ft">FT &amp; HT</span><br><br>
+      <span class="tier ht">HT only</span>&nbsp; <strong>Number of moles = mass (g) ÷ Mr</strong><br>
+      Rearranges to: <strong>Mass (g) = moles × Mr</strong> &nbsp;|&nbsp; <strong>Mr = mass (g) ÷ moles</strong>
+    </div>
+    <div class="info" style="font-size:.82rem">Atomic masses to use: H=1 | C=12 | N=14 | O=16 | Na=23 | Mg=24 | S=32 | Cl=35.5 | Ca=40 | Cu=64</div>
+
+    <h3>✏️ Worked Example 1 – Calculating Mr <span class="tier ft">FT</span><span class="tier ht">HT</span></h3>
+    <div class="worked">
+      <strong>Question:</strong> Calculate the Mr of sulfuric acid, H₂SO₄.<br>
+      <span class="step">Step 1:</span> Write out each atom and its Ar: H = 1, S = 32, O = 16<br>
+      <span class="step">Step 2:</span> Count how many of each: 2×H + 1×S + 4×O<br>
+      <span class="step">Step 3:</span> Calculate: (2×1) + (1×32) + (4×16) = 2 + 32 + 64 = <strong>98</strong>
+    </div>
+
+    <h3>✏️ Worked Example 2 – Moles from mass <span class="tier ht">HT</span></h3>
+    <div class="worked">
+      <strong>Question:</strong> Calculate the number of moles in 11.7 g of NaCl.<br>
+      <span class="step">Step 1:</span> Mr of NaCl = 23 + 35.5 = 58.5<br>
+      <span class="step">Step 2:</span> Moles = mass ÷ Mr = 11.7 ÷ 58.5 = <strong>0.2 mol</strong>
+    </div>
+
+    <h3>✏️ Worked Example 3 – Mass from moles <span class="tier ht">HT</span></h3>
+    <div class="worked">
+      <strong>Question:</strong> Calculate the mass of 0.5 moles of calcium carbonate (CaCO₃).<br>
+      <span class="step">Step 1:</span> Mr of CaCO₃ = 40 + 12 + (3×16) = 40 + 12 + 48 = 100<br>
+      <span class="step">Step 2:</span> Mass = moles × Mr = 0.5 × 100 = <strong>50 g</strong>
+    </div>
+
+    <h3>📋 Task 1 – Calculate the Mr <span class="tier ft">FT</span><span class="tier ht">HT</span></h3>
+    <table class="ft-table" id="mrT">
+      <tr><th>Compound</th><th>Formula</th><th>Your Mr</th></tr>
+      <tr><td>Water</td><td>H₂O</td><td><input data-ans="18"></td></tr>
+      <tr><td>Carbon dioxide</td><td>CO₂</td><td><input data-ans="44"></td></tr>
+      <tr><td>Sodium chloride</td><td>NaCl</td><td><input data-ans="58.5"></td></tr>
+      <tr><td>Calcium carbonate</td><td>CaCO₃</td><td><input data-ans="100"></td></tr>
+      <tr><td>Ammonia</td><td>NH₃</td><td><input data-ans="17"></td></tr>
+      <tr><td>Magnesium oxide</td><td>MgO</td><td><input data-ans="40"></td></tr>
+    </table>
+    <button class="chk" onclick="checkT('mrT')">Check Answers</button> <span class="score" id="mrTSc"></span>
+
+    <h3>📝 Exam-style Questions – Increasing Difficulty</h3>
+    <p class="qn"><span class="mk">(1 mark)</span>(a) Calculate the Mr of copper(II) oxide, CuO. <span class="tier ft">FT &amp; HT</span></p>
+    <textarea class="abox" id="mr_q1" style="min-height:40px" placeholder="Working..."></textarea>
+    <button class="rev-btn" onclick="tog('mr_ms1')">Show Mark Scheme</button>
+    <div class="ms" id="mr_ms1"><strong>✅ Mr = 64 + 16 = 80</strong></div>
+
+    <p class="qn"><span class="mk">(1 mark)</span>(b) Calculate the Mr of calcium hydroxide, Ca(OH)₂. <span class="tier ft">FT &amp; HT</span></p>
+    <textarea class="abox" id="mr_q1b" style="min-height:40px" placeholder="Watch the brackets!"></textarea>
+    <button class="rev-btn" onclick="tog('mr_ms1b')">Show Mark Scheme</button>
+    <div class="ms" id="mr_ms1b"><strong>✅</strong> Mr = 40 + (16+1)×2 = 40 + 34 = <strong>74</strong><br>⚠️ Common mistake: forgetting to multiply BOTH the O and H inside the brackets by 2.</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(c) Calculate the number of moles in 4.4 g of carbon dioxide (CO₂). Show your working. <span class="tier ht">HT only</span></p>
+    <textarea class="abox" id="mr_q2" style="min-height:45px" placeholder="Show working..."></textarea>
+    <button class="rev-btn" onclick="tog('mr_ms2')">Show Mark Scheme</button>
+    <div class="ms" id="mr_ms2"><strong>✅ Mr of CO₂ = 12 + (2×16) = 44</strong> ✓<br><strong>Moles = 4.4 ÷ 44 = 0.1 mol</strong> ✓</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(d) Calculate the mass of 2 moles of sodium chloride (NaCl). <span class="tier ht">HT only</span></p>
+    <textarea class="abox" id="mr_q3" style="min-height:45px" placeholder="Show working..."></textarea>
+    <button class="rev-btn" onclick="tog('mr_ms3')">Show Mark Scheme</button>
+    <div class="ms" id="mr_ms3"><strong>✅ Mr of NaCl = 23 + 35.5 = 58.5</strong> ✓<br><strong>Mass = 2 × 58.5 = 117 g</strong> ✓</div>
+
+    <p class="qn"><span class="mk">(3 marks)</span>(e) A student has 7.1 g of chlorine gas (Cl₂). Calculate the number of moles. Then calculate what mass of sodium (Na) would react completely with this amount of chlorine. The equation is: 2Na + Cl₂ → 2NaCl <span class="tier ht">HT</span></p>
+    <textarea class="abox" id="mr_q4" style="min-height:60px" placeholder="Show all working..."></textarea>
+    <button class="rev-btn" onclick="tog('mr_ms4')">Show Mark Scheme</button>
+    <div class="ms" id="mr_ms4"><strong>✅</strong> Mr of Cl₂ = 2 × 35.5 = 71 ✓<br>Moles of Cl₂ = 7.1 ÷ 71 = <strong>0.1 mol</strong> ✓<br>From the equation: 2 mol Na reacts with 1 mol Cl₂, so moles of Na = 0.1 × 2 = 0.2 mol<br>Mass of Na = 0.2 × 23 = <strong>4.6 g</strong> ✓</div>
+
+    <p class="qn"><span class="mk">(3 marks)</span>(f) 4.8 g of magnesium reacts with excess hydrochloric acid: Mg + 2HCl → MgCl₂ + H₂. Calculate the mass of magnesium chloride produced. <span class="tier ht">HT</span></p>
+    <textarea class="abox" id="mr_q5" style="min-height:65px" placeholder="Show all working..."></textarea>
+    <button class="rev-btn" onclick="tog('mr_ms5')">Show Mark Scheme</button>
+    <div class="ms" id="mr_ms5"><strong>✅</strong> Moles of Mg = 4.8 ÷ 24 = <strong>0.2 mol</strong> ✓<br>From equation: 1 mol Mg → 1 mol MgCl₂, so moles of MgCl₂ = 0.2 mol ✓<br>Mr of MgCl₂ = 24 + (2×35.5) = 95<br>Mass = 0.2 × 95 = <strong>19 g</strong> ✓</div>
+  </div>
+</div>
+
+<!-- W5: ACIDS -->
+<div class="section" id="w5">
+  <div class="wk-hdr" style="background:#2e7d32"><h2>Week 5 – Acids, Bases &amp; Neutralisation</h2><p>Paper 1 | Topic 11 (Combined) | Both tiers | <span class="rp-badge">Required Practical</span></p></div>
+  <div class="wk-body">
+    <div class="info">
+      🧪 <strong>Key spec facts:</strong><br>
+      • <strong>Acids</strong> produce <strong>hydrogen ions (H⁺)</strong> in aqueous solution. pH &lt; 7.<br>
+      • <strong>Aqueous solutions of alkalis</strong> contain <strong>hydroxide ions (OH⁻)</strong>. pH &gt; 7. Neutral = pH 7.<br>
+      • <strong>Neutralisation:</strong> H⁺ + OH⁻ → H₂O (the ionic equation for all acid-alkali neutralisations)<br>
+      • Acid + base → salt + water &nbsp;|&nbsp; Acid + metal → salt + hydrogen<br>
+      • Acid + metal carbonate → salt + water + carbon dioxide<br>
+      • Salt name: first part from metal/base, second part from acid:<br>
+      &nbsp;&nbsp;– hydrochloric acid → <strong>chloride</strong> &nbsp;|&nbsp; sulfuric acid → <strong>sulfate</strong> &nbsp;|&nbsp; nitric acid → <strong>nitrate</strong><br>
+      • <strong>Titration</strong> uses a <strong>burette</strong> to add acid/alkali drop by drop to find exact volumes that react.
+    </div>
+
+    <h3>📋 Salt Naming Practice</h3>
+    <table class="ft-table" id="saltT">
+      <tr><th>Acid</th><th>Base / Metal</th><th>Salt produced</th></tr>
+      <tr><td>Hydrochloric acid</td><td>Sodium hydroxide</td><td><input data-ans="sodium chloride"></td></tr>
+      <tr><td>Sulfuric acid</td><td>Magnesium</td><td><input data-ans="magnesium sulfate"></td></tr>
+      <tr><td>Nitric acid</td><td>Calcium carbonate</td><td><input data-ans="calcium nitrate"></td></tr>
+      <tr><td>Hydrochloric acid</td><td>Copper oxide</td><td><input data-ans="copper chloride"></td></tr>
+      <tr><td>Sulfuric acid</td><td>Zinc</td><td><input data-ans="zinc sulfate"></td></tr>
+    </table>
+    <button class="chk" onclick="checkT('saltT')">Check Answers</button> <span class="score" id="saltTSc"></span>
+
+    <h3>📝 Exam-style Questions</h3>
+    <p style="font-size:.87rem;margin-bottom:8px;">A student adds sodium hydroxide solution to hydrochloric acid.</p>
+
+    <p class="qn"><span class="mk">(1 mark)</span>(a) What type of reaction is this?</p>
+    <div id="mc_a1">
+      <div class="mcq-opt" onclick="mcq(this,'a1',false)"><div class="dot"></div>Oxidation</div>
+      <div class="mcq-opt" onclick="mcq(this,'a1',true)"><div class="dot"></div>Neutralisation</div>
+      <div class="mcq-opt" onclick="mcq(this,'a1',false)"><div class="dot"></div>Displacement</div>
+    </div>
+
+    <p class="qn"><span class="mk">(1 mark)</span>(b) Complete the word equation:<br>sodium hydroxide + hydrochloric acid → ________ + ________</p>
+    <textarea class="abox" id="a_q2" style="min-height:42px" placeholder="Products..."></textarea>
+    <button class="rev-btn" onclick="tog('a_ms2')">Show Mark Scheme</button>
+    <div class="ms" id="a_ms2"><strong>✅ sodium chloride + water</strong></div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(c) Write the balanced symbol equation for this reaction.</p>
+    <textarea class="abox" id="a_q3" style="min-height:42px" placeholder="Symbol equation..."></textarea>
+    <button class="rev-btn" onclick="tog('a_ms3')">Show Mark Scheme</button>
+    <div class="ms" id="a_ms3"><strong>✅ NaOH + HCl → NaCl + H₂O</strong><br>1 mark: correct formulae for products. 1 mark: balanced (already balanced as 1:1:1:1).</div>
+
+    <p class="qn"><span class="mk">(1 mark)</span>(d) Write the ionic equation for this neutralisation reaction. <span class="tier ht">HT</span></p>
+    <textarea class="abox" id="a_q4" style="min-height:40px" placeholder="Ionic equation..."></textarea>
+    <button class="rev-btn" onclick="tog('a_ms4')">Show Mark Scheme</button>
+    <div class="ms" id="a_ms4"><strong>✅ H⁺ + OH⁻ → H₂O</strong><br>This ionic equation applies to all neutralisation reactions between strong acids and alkalis.</div>
+
+    <p class="qn"><span class="mk">(1 mark)</span>(e) The indicator turns green after the reaction. What does this tell you?</p>
+    <div id="mc_a5">
+      <div class="mcq-opt" onclick="mcq(this,'a5',false)"><div class="dot"></div>The solution is acidic (pH &lt; 7)</div>
+      <div class="mcq-opt" onclick="mcq(this,'a5',true)"><div class="dot"></div>The solution is neutral (pH 7)</div>
+      <div class="mcq-opt" onclick="mcq(this,'a5',false)"><div class="dot"></div>The solution is alkaline (pH &gt; 7)</div>
+    </div>
+
+    <p class="qn"><span class="mk">(1 mark)</span>(f) Name the piece of equipment used to add the acid drop by drop in a titration.</p>
+    <textarea class="abox" id="a_q6" style="min-height:40px" placeholder="Equipment name..."></textarea>
+    <button class="rev-btn" onclick="tog('a_ms6')">Show Mark Scheme</button>
+    <div class="ms" id="a_ms6"><strong>✅ Burette</strong></div>
+
+    <h3>📝 Extra Exam-style – Acid + Carbonate</h3>
+    <p class="qn"><span class="mk">(3 marks)</span>(g) A student adds calcium carbonate powder to dilute hydrochloric acid. She observes fizzing. Write the word equation for this reaction, name the gas produced, and describe a test for the gas.</p>
+    <textarea class="abox" id="a_q7" style="min-height:65px" placeholder="Word equation, gas name, test..."></textarea>
+    <button class="rev-btn" onclick="tog('a_ms7')">Show Mark Scheme</button>
+    <div class="ms" id="a_ms7"><strong>✅</strong> calcium carbonate + hydrochloric acid → calcium chloride + water + carbon dioxide ✓<br>The gas is carbon dioxide ✓<br>Test: bubble through limewater — it turns cloudy/milky ✓</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(h) A student adds excess copper oxide to warm dilute sulfuric acid. After the reaction, black copper oxide powder remains at the bottom. Describe how the student could obtain pure, dry copper sulfate crystals from the solution.</p>
+    <textarea class="abox" id="a_q8" style="min-height:65px" placeholder="Describe the method..."></textarea>
+    <button class="rev-btn" onclick="tog('a_ms8')">Show Mark Scheme</button>
+    <div class="ms" id="a_ms8"><strong>✅</strong> Filter the solution to remove excess copper oxide ✓. Then evaporate / heat the filtrate gently (or leave to crystallise) until crystals form ✓. Pat dry with filter paper.<br><em>This is linked to the Required Practical — see the RP section for more detail.</em></div>
+  </div>
+</div>
+
+<!-- W6: REACTIVITY (CORRECTED) -->
+<div class="section" id="w6">
+  <div class="wk-hdr" style="background:#1565c0"><h2>Week 6 – The Reactivity Series &amp; Metal Extraction</h2><p>Paper 1 | Topic 11 (Combined) | Both tiers</p></div>
+  <div class="wk-body">
+    <div class="info">
+      ⚡ <strong>Key spec facts:</strong><br>
+      • The <strong>reactivity of a metal</strong> is related to its tendency to form positive ions.<br>
+      • A <strong>more reactive metal</strong> can displace a less reactive metal from a compound.<br>
+      • <strong>Oxidation</strong> = gain of oxygen (or loss of electrons, HT). <strong>Reduction</strong> = loss of oxygen (or gain of electrons, HT).<br>
+      • Metals less reactive than carbon can be extracted by <strong>reduction with carbon</strong>.<br>
+      • Metals more reactive than carbon (e.g. aluminium) must be extracted by <strong>electrolysis</strong>.<br>
+      • <span class="tier ht">HT:</span> Oxidation is loss of electrons (OIL RIG: Oxidation Is Loss, Reduction Is Gain).
+    </div>
+
+    <h3>⚡ The Correct Reactivity Series (AQA)</h3>
+    <p style="font-size:.83rem;color:#666;margin-bottom:8px;">From most reactive (top) to least reactive (bottom). You <strong>must</strong> learn this order.</p>
+    <div class="reactivity-tower">
+      <div class="rt-row rt-high"><span class="rt-label">K</span> Potassium — too reactive, extracted by electrolysis</div>
+      <div class="rt-row rt-high"><span class="rt-label">Na</span> Sodium — reacts vigorously with cold water</div>
+      <div class="rt-row rt-high"><span class="rt-label">Li</span> Lithium — reacts with cold water</div>
+      <div class="rt-row rt-high"><span class="rt-label">Ca</span> Calcium — reacts with cold water</div>
+      <div class="rt-row rt-mid"><span class="rt-label">Mg</span> Magnesium — reacts very slowly with water, vigorous with acid</div>
+      <div class="rt-row rt-mid" style="opacity:0.65;font-style:italic;border:2px dashed #f57f17"><span class="rt-label">Al</span> Aluminium — (for extraction Qs: more reactive than C → needs electrolysis)</div>
+      <div class="rt-row rt-carbon"><span class="rt-label">C</span> Carbon ← metals BELOW here extracted with carbon</div>
+      <div class="rt-row rt-mid"><span class="rt-label">Zn</span> Zinc — reacts with dilute acid</div>
+      <div class="rt-row rt-mid"><span class="rt-label">Fe</span> Iron — reacts slowly with dilute acid</div>
+      <div class="rt-row rt-hydrogen"><span class="rt-label">H</span> Hydrogen ← metals BELOW here don't react with acid</div>
+      <div class="rt-row rt-low"><span class="rt-label">Cu</span> Copper — does NOT react with dilute acid (least reactive on AQA list)</div>
+    </div>
+    <div class="warn">⚠️ <strong>AQA Combined Science spec requires this exact list:</strong> K, Na, Li, Ca, Mg, C, Zn, Fe, H, Cu — learn this order! Carbon sits between magnesium and zinc. Hydrogen sits between iron and copper. Metals <em>above</em> hydrogen react with dilute acid → produce H₂ gas. Metals <em>below</em> hydrogen (like copper) do <strong>not</strong> react with dilute acid. Aluminium is needed for extraction questions — it's more reactive than carbon, so it must be extracted by electrolysis.</div>
+
+    <h3>🃏 Reactivity Flashcards – Click to reveal!</h3>
+    <p class="fc-hint">Mnemonic: <strong>"Please Send Lions, Cats, Monkeys — Cute Zebras In Huge Cages"</strong><br>(Potassium, Sodium, Lithium, Calcium, Magnesium — Carbon, Zinc, Iron, Hydrogen, Copper)</p>
+    <div class="fc-area">
+      <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-in"><div class="fc-f">Which metals react with cold water?</div><div class="fc-b">K, Na, Li, Ca — the most reactive metals. They produce a metal hydroxide + hydrogen gas.</div></div></div>
+      <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-in"><div class="fc-f">Where does carbon sit?</div><div class="fc-b">Between aluminium and zinc. Metals below carbon can be extracted by reduction with carbon.</div></div></div>
+      <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-in"><div class="fc-f">Where does hydrogen sit?</div><div class="fc-b">Between iron and copper. Metals above hydrogen react with dilute acid to make H₂ gas.</div></div></div>
+      <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-in"><div class="fc-f">Why is aluminium extracted by electrolysis?</div><div class="fc-b">Aluminium is more reactive than carbon, so carbon cannot displace it. Electrolysis must be used.</div></div></div>
+      <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-in"><div class="fc-f">What does OIL RIG stand for? (HT)</div><div class="fc-b">Oxidation Is Loss (of electrons), Reduction Is Gain (of electrons).</div></div></div>
+    </div>
+
+    <h3>📝 Displacement Reactions – Will it happen?</h3>
+    <p style="font-size:.83rem;color:#666;margin-bottom:8px;">A more reactive metal displaces a less reactive metal from its compound.</p>
+    <p class="qn">Zinc added to copper sulfate solution:</p>
+    <div id="mc_d1"><div class="mcq-opt" onclick="mcq(this,'d1',true)"><div class="dot"></div>✅ Yes — reaction occurs (Zn is more reactive than Cu)</div><div class="mcq-opt" onclick="mcq(this,'d1',false)"><div class="dot"></div>❌ No — no reaction</div></div>
+    <p class="qn">Copper added to magnesium sulfate solution:</p>
+    <div id="mc_d2"><div class="mcq-opt" onclick="mcq(this,'d2',false)"><div class="dot"></div>✅ Yes — reaction occurs</div><div class="mcq-opt" onclick="mcq(this,'d2',true)"><div class="dot"></div>❌ No — no reaction (Cu is less reactive than Mg)</div></div>
+    <p class="qn">Iron added to zinc sulfate solution:</p>
+    <div id="mc_d3"><div class="mcq-opt" onclick="mcq(this,'d3',false)"><div class="dot"></div>✅ Yes — reaction occurs</div><div class="mcq-opt" onclick="mcq(this,'d3',true)"><div class="dot"></div>❌ No — no reaction (Fe is less reactive than Zn)</div></div>
+    <p class="qn">Magnesium added to iron sulfate solution:</p>
+    <div id="mc_d4"><div class="mcq-opt" onclick="mcq(this,'d4',true)"><div class="dot"></div>✅ Yes — reaction occurs (Mg is more reactive than Fe)</div><div class="mcq-opt" onclick="mcq(this,'d4',false)"><div class="dot"></div>❌ No — no reaction</div></div>
+    <p class="qn">Copper added to silver nitrate solution:</p>
+    <div id="mc_d5"><div class="mcq-opt" onclick="mcq(this,'d5',true)"><div class="dot"></div>✅ Yes — reaction occurs (Cu is more reactive than Ag)</div><div class="mcq-opt" onclick="mcq(this,'d5',false)"><div class="dot"></div>❌ No — no reaction</div></div>
+
+    <h3>📝 Exam-style Questions – Metal Extraction</h3>
+    <p class="qn"><span class="mk">(2 marks)</span>(a) Explain why iron can be extracted from iron oxide by reduction with carbon, but aluminium cannot be extracted this way.</p>
+    <textarea class="abox" id="r_q1" placeholder="Your explanation..."></textarea>
+    <button class="rev-btn" onclick="tog('r_ms1')">Show Mark Scheme</button>
+    <div class="ms" id="r_ms1"><strong>✅</strong> Iron is less reactive than carbon ✓, so carbon can displace / reduce iron from its oxide. Aluminium is more reactive than carbon ✓, so carbon cannot reduce aluminium oxide — electrolysis must be used instead.</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(b) A student places a piece of zinc into copper sulfate solution. The solution changes from blue to colourless and a brown/orange solid appears. Write the word equation and explain what has happened.</p>
+    <textarea class="abox" id="r_q2" placeholder="Word equation and explanation..."></textarea>
+    <button class="rev-btn" onclick="tog('r_ms2')">Show Mark Scheme</button>
+    <div class="ms" id="r_ms2"><strong>✅</strong> zinc + copper sulfate → zinc sulfate + copper ✓<br>Zinc is more reactive than copper, so zinc displaces copper from the solution ✓. The copper is deposited as a brown/orange solid and the blue colour disappears as copper ions are removed.</div>
+
+    <p class="qn"><span class="mk">(3 marks)</span>(c) In the displacement reaction Zn + CuSO₄ → ZnSO₄ + Cu, identify which substance is oxidised and which is reduced. Explain your answer in terms of electron transfer. <span class="tier ht">HT</span></p>
+    <textarea class="abox" id="r_q3" placeholder="Oxidised: ... Reduced: ... Explain..."></textarea>
+    <button class="rev-btn" onclick="tog('r_ms3')">Show Mark Scheme</button>
+    <div class="ms" id="r_ms3"><strong>✅</strong> Zinc is <strong>oxidised</strong> — it loses electrons (Zn → Zn²⁺ + 2e⁻) ✓<br>Copper is <strong>reduced</strong> — copper ions gain electrons (Cu²⁺ + 2e⁻ → Cu) ✓<br>OIL RIG: Oxidation Is Loss, Reduction Is Gain ✓</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(d) A student wants to find out if metal X is more or less reactive than iron. She places a piece of metal X into iron sulfate solution. No reaction occurs. She then places a piece of iron into a solution of metal X sulfate. A reaction occurs. Place metal X in the reactivity series relative to iron and copper. Explain your reasoning.</p>
+    <textarea class="abox" id="r_q4" style="min-height:65px" placeholder="Position and reasoning..."></textarea>
+    <button class="rev-btn" onclick="tog('r_ms4')">Show Mark Scheme</button>
+    <div class="ms" id="r_ms4"><strong>✅</strong> Metal X is less reactive than iron ✓ (because X cannot displace iron, but iron can displace X). Metal X is positioned below iron in the reactivity series (between iron/hydrogen and copper, or below copper depending on further tests) ✓.</div>
+  </div>
+</div>
+
+<!-- W7: RATES -->
+<div class="section" id="w7">
+  <div class="wk-hdr" style="background:#e65100"><h2>Week 7 – Rates of Reaction &amp; Required Practical</h2><p>Paper 2 | Topic 13 (Combined) | Both tiers | <span class="rp-badge">Required Practical</span></p></div>
+  <div class="wk-body">
+    <div class="info">
+      🔥 <strong>Key spec facts — factors that increase rate of reaction:</strong><br>
+      1. ↑ <strong>Concentration</strong> (or pressure for gases) — more particles in the same volume → more frequent collisions<br>
+      2. ↑ <strong>Temperature</strong> — particles move faster → more frequent collisions <em>and</em> more particles have energy ≥ activation energy<br>
+      3. ↑ <strong>Surface area</strong> — more particles exposed to react → more frequent collisions<br>
+      4. Add a <strong>catalyst</strong> — provides an alternative reaction pathway with a <strong>lower activation energy</strong><br><br>
+      <strong>Activation energy</strong> = the minimum amount of energy particles must have to react when they collide.
+    </div>
+    <div class="warn">⚠️ <strong>Collision theory mark scheme tip:</strong> A full 3-mark collision theory answer must include: (1) particles have more energy / move faster, (2) collisions are more frequent, (3) more collisions have energy ≥ the activation energy (more successful collisions). AQA specifically require the phrase <em>activation energy</em> for the highest marks.</div>
+
+    <h3>📝 Required Practical – Sodium thiosulfate + HCl</h3>
+    <p style="font-size:.87rem">A student investigates the effect of temperature on rate of reaction. A cross is drawn under the flask. The student times how long until the cross disappears as a sulfur precipitate forms.</p>
+
+    <p class="qn"><span class="mk">(1 mark)</span>(a) What is the <strong>dependent variable</strong>?</p>
+    <div id="mc_r1">
+      <div class="mcq-opt" onclick="mcq(this,'r1',false)"><div class="dot"></div>Temperature of the solution</div>
+      <div class="mcq-opt" onclick="mcq(this,'r1',true)"><div class="dot"></div>Time for the cross to disappear</div>
+      <div class="mcq-opt" onclick="mcq(this,'r1',false)"><div class="dot"></div>Concentration of sodium thiosulfate</div>
+    </div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(b) Give <strong>two</strong> variables the student must control to make the test fair.</p>
+    <textarea class="abox" id="rt_q2" placeholder="1.&#10;2."></textarea>
+    <button class="rev-btn" onclick="tog('rt_ms2')">Show Mark Scheme</button>
+    <div class="ms" id="rt_ms2"><strong>✅ Any two from:</strong> concentration of sodium thiosulfate ✓ | concentration of hydrochloric acid ✓ | volume of each solution ✓ | same size/type of cross ✓</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(c) As temperature increases from 20°C to 60°C, the time for the cross to disappear decreases from 124 s to 10 s. Describe the pattern shown.</p>
+    <textarea class="abox" id="rt_q3" style="min-height:50px" placeholder="Describe the trend..."></textarea>
+    <button class="rev-btn" onclick="tog('rt_ms3')">Show Mark Scheme</button>
+    <div class="ms" id="rt_ms3"><strong>✅</strong> As temperature increases ✓, the time taken decreases / the rate of reaction increases ✓. <em>Accept: they are inversely related / as one increases the other decreases.</em></div>
+
+    <p class="qn"><span class="mk">(3 marks)</span>(d) Using collision theory, explain why increasing temperature increases the rate of reaction.</p>
+    <textarea class="abox" id="rt_q4" placeholder="Use collision theory — aim for 3 separate points..."></textarea>
+    <button class="rev-btn" onclick="tog('rt_ms4')">Show Mark Scheme</button>
+    <div class="ms" id="rt_ms4">
+      <strong>✅ One mark per bullet:</strong><br>
+      • Increasing temperature gives the particles more (kinetic) energy ✓<br>
+      • Particles move faster and collide more frequently ✓<br>
+      • More collisions have energy greater than or equal to the <strong>activation energy</strong> / more successful collisions ✓
+    </div>
+
+    <h3>📝 Extra Exam-style – Surface Area &amp; Catalysts</h3>
+    <p class="qn"><span class="mk">(3 marks)</span>(e) A student reacts marble chips (calcium carbonate) with dilute hydrochloric acid and measures the volume of gas collected. She then repeats the experiment using the same mass of powdered calcium carbonate. Explain why the powdered form reacts faster. Sketch on paper what the two curves would look like on a graph of "gas volume vs time".</p>
+    <textarea class="abox" id="rt_q5" style="min-height:70px" placeholder="Explain + describe graph shape..."></textarea>
+    <button class="rev-btn" onclick="tog('rt_ms5')">Show Mark Scheme</button>
+    <div class="ms" id="rt_ms5"><strong>✅</strong> Powder has a larger surface area (exposed to the acid) ✓. More particles are available to collide with the acid / collisions are more frequent ✓. Both curves reach the same final volume (same mass of reactant) but the powder curve is steeper / reaches the final volume sooner ✓.</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(f) A catalyst is added to a reaction. Define the term catalyst and state what happens to the catalyst at the end of the reaction.</p>
+    <textarea class="abox" id="rt_q6" placeholder="Definition..."></textarea>
+    <button class="rev-btn" onclick="tog('rt_ms6')">Show Mark Scheme</button>
+    <div class="ms" id="rt_ms6"><strong>✅</strong> A catalyst is a substance that increases the rate of a chemical reaction without being used up / consumed ✓. It works by providing an alternative reaction pathway with a lower activation energy ✓. The catalyst is chemically unchanged at the end of the reaction.</div>
+
+    <p class="qn"><span class="mk">(1 mark)</span>(g) What is the formula to calculate rate of reaction from the disappearing cross experiment?</p>
+    <div id="mc_r2">
+      <div class="mcq-opt" onclick="mcq(this,'r2',false)"><div class="dot"></div>Rate = time ÷ volume</div>
+      <div class="mcq-opt" onclick="mcq(this,'r2',true)"><div class="dot"></div>Rate = 1000 ÷ time (s)</div>
+      <div class="mcq-opt" onclick="mcq(this,'r2',false)"><div class="dot"></div>Rate = mass × time</div>
+    </div>
+  </div>
+</div>
+
+<!-- W8: ELECTROLYSIS -->
+<div class="section" id="w8">
+  <div class="wk-hdr" style="background:#6a1b9a"><h2>Week 8 – Electrolysis</h2><p>Paper 1 | Topic 11 (Combined) | Both tiers | <span class="rp-badge">Required Practical</span></p></div>
+  <div class="wk-body">
+    <div class="info">
+      ⚡ <strong>Key spec facts:</strong><br>
+      • <strong>Electrolysis</strong> uses an electric current to break down an ionic compound (the <strong>electrolyte</strong>).<br>
+      • Electrolysis only works when the ionic compound is <strong>melted</strong> or <strong>dissolved in water</strong> — because the ions must be <strong>free to move</strong>.<br>
+      • Positive ions move to the <strong>negative electrode (cathode)</strong> → metals or hydrogen are produced here.<br>
+      • Negative ions move to the <strong>positive electrode (anode)</strong> → non-metals are produced here (e.g. oxygen or chlorine).<br>
+      • For aqueous solutions: hydrogen is produced at the cathode if the metal is <strong>more reactive than hydrogen</strong>. Oxygen is produced at the anode <em>unless</em> the solution contains halide ions, in which case the <strong>halogen</strong> is produced.<br>
+      • Electrolysis is used to extract reactive metals (e.g. <strong>aluminium</strong> from aluminium oxide/cryolite mixture) that cannot be extracted by reduction with carbon.<br>
+      <span class="tier ht">HT only:</span> At the cathode, positive ions <strong>gain electrons</strong> → reduction. At the anode, negative ions <strong>lose electrons</strong> → oxidation. Half equations can be written for these reactions.
+    </div>
+
+    <h3>📋 Task – Products of electrolysis</h3>
+    <table class="ft-table" id="elyT">
+      <tr><th>Substance electrolysed</th><th>Product at cathode (−)</th><th>Product at anode (+)</th></tr>
+      <tr><td>Molten lead bromide</td><td><input data-ans="lead"></td><td><input data-ans="bromine"></td></tr>
+      <tr><td>Molten aluminium oxide</td><td><input data-ans="aluminium"></td><td><input data-ans="oxygen"></td></tr>
+      <tr><td>Aqueous copper sulfate</td><td><input data-ans="copper"></td><td><input data-ans="oxygen"></td></tr>
+      <tr><td>Aqueous sodium chloride (brine)</td><td><input data-ans="hydrogen"></td><td><input data-ans="chlorine"></td></tr>
+    </table>
+    <button class="chk" onclick="checkT('elyT')">Check Answers</button> <span class="score" id="elyTSc"></span>
+
+    <div class="warn">⚠️ <strong>Aqueous solutions tip:</strong> Ask two questions: (1) <em>Cathode:</em> is the metal more reactive than hydrogen? If YES → hydrogen forms. If NO → the metal forms. (2) <em>Anode:</em> is a halide ion present (Cl⁻, Br⁻, I⁻)? If YES → the halogen forms. If NO → oxygen forms.</div>
+
+    <h3>📝 Exam-style Questions</h3>
+    <p class="qn"><span class="mk">(1 mark)</span>(a) Why must lead bromide be molten (not solid) for electrolysis to work?</p>
+    <div id="mc_e1">
+      <div class="mcq-opt" onclick="mcq(this,'e1',false)"><div class="dot"></div>So that it reaches a high enough temperature to react</div>
+      <div class="mcq-opt" onclick="mcq(this,'e1',true)"><div class="dot"></div>So that the ions are free to move and carry electrical charge</div>
+      <div class="mcq-opt" onclick="mcq(this,'e1',false)"><div class="dot"></div>So that it conducts electricity through its covalent bonds</div>
+    </div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(b) During electrolysis of molten lead bromide, at which electrode does lead form? Explain why, in terms of ion movement.</p>
+    <textarea class="abox" id="el_q2" style="min-height:55px" placeholder="Electrode + explanation..."></textarea>
+    <button class="rev-btn" onclick="tog('el_ms2')">Show Mark Scheme</button>
+    <div class="ms" id="el_ms2"><strong>✅ Cathode / negative electrode</strong> ✓ because lead ions are positively charged (Pb²⁺) and are attracted to (move towards) the negative electrode ✓.</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(c) Complete and balance the half equation for the formation of bromine at the anode. <span class="tier ht">HT</span><br>2Br⁻ → _______ + _______</p>
+    <textarea class="abox" id="el_q3" style="min-height:42px" placeholder="Complete the half equation..."></textarea>
+    <button class="rev-btn" onclick="tog('el_ms3')">Show Mark Scheme</button>
+    <div class="ms" id="el_ms3"><strong>✅ 2Br⁻ → Br₂ + 2e⁻</strong><br>1 mark for Br₂, 1 mark for 2e⁻. This is an <strong>oxidation</strong> reaction — negative ions lose electrons at the anode.</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(d) During electrolysis of aqueous sodium chloride (brine), hydrogen is produced at the cathode instead of sodium. Explain why.</p>
+    <textarea class="abox" id="el_q4" style="min-height:55px" placeholder="Your explanation..."></textarea>
+    <button class="rev-btn" onclick="tog('el_ms4')">Show Mark Scheme</button>
+    <div class="ms" id="el_ms4"><strong>✅</strong> Sodium is more reactive than hydrogen ✓. When the metal is more reactive than hydrogen, hydrogen ions (from the water) are discharged / reduced at the cathode instead ✓.</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(e) Write the half equation for the production of hydrogen at the cathode during the electrolysis of brine. <span class="tier ht">HT</span></p>
+    <textarea class="abox" id="el_q5" style="min-height:42px" placeholder="Half equation..."></textarea>
+    <button class="rev-btn" onclick="tog('el_ms5')">Show Mark Scheme</button>
+    <div class="ms" id="el_ms5"><strong>✅ 2H⁺ + 2e⁻ → H₂</strong><br>1 mark for H₂, 1 mark for 2e⁻ on the correct side (gained). This is <strong>reduction</strong> — hydrogen ions gain electrons at the cathode.</div>
+  </div>
+</div>
+
+<!-- W9: ORGANIC -->
+<div class="section" id="w9">
+  <div class="wk-hdr" style="background:#00838f"><h2>Week 9 – Organic Chemistry: Crude Oil &amp; Hydrocarbons</h2><p>Paper 2 | Topic 14 (Combined) | Both tiers</p></div>
+  <div class="wk-body">
+    <div class="info">
+      🛢️ <strong>Key spec facts:</strong><br>
+      • <strong>Crude oil</strong> is a mixture of hydrocarbons (compounds containing only carbon and hydrogen).<br>
+      • Separated by <strong>fractional distillation</strong>: different fractions condense at different temperatures because they have different chain lengths → different strengths of <strong>intermolecular forces</strong>.<br>
+      • Longer chains → stronger intermolecular forces → higher boiling point, more viscous (thicker), less flammable.<br>
+      • Shorter chains → weaker intermolecular forces → lower boiling point, more flammable, less viscous.<br>
+      • <strong>Alkanes</strong> have the general formula CₙH₂ₙ₊₂. They have single C–C bonds only (saturated).<br>
+      • <strong>Alkenes</strong> have a C=C double bond (unsaturated). General formula CₙH₂ₙ.<br>
+      • <strong>Cracking</strong> breaks down long-chain hydrocarbons into shorter, more useful molecules including alkenes.<br>
+      • <strong>Test for an alkene:</strong> add <strong>bromine water</strong> — it <strong>decolourises</strong> (orange/brown → colourless) because the alkene reacts across the double bond. Alkanes do NOT decolourise bromine water.
+    </div>
+
+    <h3>📋 Task 1 – Alkane Names &amp; Formulae</h3>
+    <table class="ft-table" id="alkT">
+      <tr><th>Name</th><th>No. of carbons</th><th>Formula (CₙH₂ₙ₊₂)</th></tr>
+      <tr><td>Methane</td><td>1</td><td><input data-ans="ch4"></td></tr>
+      <tr><td>Ethane</td><td>2</td><td><input data-ans="c2h6"></td></tr>
+      <tr><td>Propane</td><td>3</td><td><input data-ans="c3h8"></td></tr>
+      <tr><td>Butane</td><td>4</td><td><input data-ans="c4h10"></td></tr>
+    </table>
+    <button class="chk" onclick="checkT('alkT')">Check Answers</button> <span class="score" id="alkTSc"></span>
+
+    <h3>📋 Task 2 – Fractions of crude oil</h3>
+    <table class="ft-table" id="fracT">
+      <tr><th>Fraction</th><th>Approx. chain length</th><th>Boiling point</th><th>Main use</th></tr>
+      <tr><td>Refinery gases</td><td><input data-ans="c1-c4"></td><td><input data-ans="very low"></td><td>Cooking / heating</td></tr>
+      <tr><td>Petrol (gasoline)</td><td><input data-ans="c5-c10"></td><td>Low</td><td><input data-ans="cars"></td></tr>
+      <tr><td>Kerosene</td><td>C11–C15</td><td><input data-ans="medium"></td><td><input data-ans="jet fuel"></td></tr>
+      <tr><td>Diesel</td><td><input data-ans="c15-c19"></td><td>High</td><td>Lorries / trains</td></tr>
+      <tr><td>Fuel oil / bitumen</td><td>C20+</td><td><input data-ans="very high"></td><td><input data-ans="roads/ships"></td></tr>
+    </table>
+    <button class="chk" onclick="checkT('fracT')">Check Answers</button> <span class="score" id="fracTSc"></span>
+
+    <h3>📝 Exam-style Questions</h3>
+    <p class="qn"><span class="mk">(1 mark)</span>(a) Name the process used to separate crude oil into fractions.</p>
+    <div id="mc_o1">
+      <div class="mcq-opt" onclick="mcq(this,'o1',false)"><div class="dot"></div>Simple distillation</div>
+      <div class="mcq-opt" onclick="mcq(this,'o1',true)"><div class="dot"></div>Fractional distillation</div>
+      <div class="mcq-opt" onclick="mcq(this,'o1',false)"><div class="dot"></div>Filtration</div>
+    </div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(b) Explain why shorter chain hydrocarbons have lower boiling points than longer chain hydrocarbons.</p>
+    <textarea class="abox" id="or_q2" style="min-height:55px" placeholder="Your explanation..."></textarea>
+    <button class="rev-btn" onclick="tog('or_ms2')">Show Mark Scheme</button>
+    <div class="ms" id="or_ms2"><strong>✅</strong> Shorter chain hydrocarbons have weaker <strong>intermolecular forces</strong> between molecules ✓. Less energy is needed to overcome these forces / separate the molecules ✓.<br><em>Note: Do not say "weaker bonds" — it is the intermolecular forces (between molecules) that are weaker, not the covalent bonds within molecules.</em></div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(c) Decane (C₁₀H₂₂) is cracked to form octane (C₈H₁₈) and one other product. Complete the equation and name the other product.<br>C₁₀H₂₂ → C₈H₁₈ + _______</p>
+    <textarea class="abox" id="or_q3" style="min-height:42px" placeholder="Formula and name..."></textarea>
+    <button class="rev-btn" onclick="tog('or_ms3')">Show Mark Scheme</button>
+    <div class="ms" id="or_ms3"><strong>✅ C₂H₄</strong> ✓ — named <strong>ethene</strong> ✓. It is an alkene (contains a C=C double bond). Check: 10C = 8C + 2C ✓ and 22H = 18H + 4H ✓</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(d) Describe a test to show that the product in (c) is an alkene (unsaturated).</p>
+    <textarea class="abox" id="or_q4" style="min-height:50px" placeholder="Test and result..."></textarea>
+    <button class="rev-btn" onclick="tog('or_ms4')">Show Mark Scheme</button>
+    <div class="ms" id="or_ms4"><strong>✅ Add bromine water</strong> ✓ → it <strong>decolourises</strong> (changes from orange/brown to colourless) ✓.<br>This happens because the bromine reacts across the C=C double bond. An alkane would not decolourise bromine water.</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(e) Explain why cracking is an important industrial process.</p>
+    <textarea class="abox" id="or_q5" style="min-height:55px" placeholder="Two reasons..."></textarea>
+    <button class="rev-btn" onclick="tog('or_ms5')">Show Mark Scheme</button>
+    <div class="ms" id="or_ms5"><strong>✅</strong> There is a higher demand for shorter chain hydrocarbons (e.g. petrol) than supply from fractional distillation ✓. Cracking also produces alkenes, which are useful for making polymers / plastics ✓.</div>
+
+    <p class="qn"><span class="mk">(3 marks)</span>(f) Write the balanced symbol equation for the complete combustion of propane (C₃H₈). State two products of complete combustion.</p>
+    <textarea class="abox" id="or_q6" style="min-height:55px" placeholder="Equation + products..."></textarea>
+    <button class="rev-btn" onclick="tog('or_ms6')">Show Mark Scheme</button>
+    <div class="ms" id="or_ms6"><strong>✅ C₃H₈ + 5O₂ → 3CO₂ + 4H₂O</strong> ✓✓<br>Products: carbon dioxide and water ✓. Complete combustion occurs when there is plenty of oxygen.</div>
+  </div>
+</div>
+
+<!-- REQUIRED PRACTICALS -->
+<div class="section" id="rp">
+  <div class="wk-hdr" style="background:#ff6f00"><h2>🔬 Required Practicals – Key Knowledge</h2><p>These are experiments AQA <strong>will</strong> ask about. Learn the method, variables, and common exam questions.</p></div>
+  <div class="wk-body">
+    <div class="warn">⚠️ <strong>Why this matters:</strong> AQA can ask questions about required practicals on ANY paper. You need to know the method, variables, results, and how to improve accuracy — even if you didn't do the practical yourself. These are some of the most predictable marks on the paper.</div>
+
+    <!-- RP1: Making Salts -->
+    <h3>🔬 RP1 – Preparation of a Pure, Dry Sample of a Soluble Salt <small>(Links to W5 Acids)</small></h3>
+    <div class="info">
+      <strong>Aim:</strong> Make pure crystals of a soluble salt (e.g. copper sulfate) from an insoluble base (e.g. copper oxide) and an acid (e.g. sulfuric acid).<br><br>
+      <strong>Method:</strong><br>
+      1. Warm the dilute acid gently in a beaker.<br>
+      2. Add the insoluble base (e.g. copper oxide) a spatula at a time, stirring after each addition.<br>
+      3. Continue adding until the base is in <strong>excess</strong> — you know it's in excess when some unreacted solid remains at the bottom.<br>
+      4. <strong>Filter</strong> the mixture to remove the excess solid. The filtrate contains the dissolved salt.<br>
+      5. Pour the filtrate into an <strong>evaporating basin</strong> and heat gently (or leave to crystallise slowly) until crystals form.<br>
+      6. Pat dry with filter paper.<br><br>
+      <strong>Why add excess base?</strong> To make sure all the acid has reacted — so the salt solution is not contaminated with unreacted acid.
+    </div>
+
+    <p class="qn"><span class="mk">(1 mark)</span>(a) Why is the acid warmed before adding the copper oxide?</p>
+    <div id="mc_rp1a">
+      <div class="mcq-opt" onclick="mcq(this,'rp1a',true)"><div class="dot"></div>To increase the rate of reaction</div>
+      <div class="mcq-opt" onclick="mcq(this,'rp1a',false)"><div class="dot"></div>To melt the copper oxide</div>
+      <div class="mcq-opt" onclick="mcq(this,'rp1a',false)"><div class="dot"></div>To evaporate the water</div>
+    </div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(b) How does the student know when enough copper oxide has been added?</p>
+    <textarea class="abox" id="rp1_q2" placeholder="Your answer..."></textarea>
+    <button class="rev-btn" onclick="tog('rp1_ms2')">Show Mark Scheme</button>
+    <div class="ms" id="rp1_ms2"><strong>✅</strong> When the copper oxide is in excess / when unreacted copper oxide remains at the bottom of the beaker after stirring ✓. This shows all the acid has been used up ✓.</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(c) Name the two separation techniques used in this practical and explain what each one removes.</p>
+    <textarea class="abox" id="rp1_q3" style="min-height:55px" placeholder="Technique 1: ... removes ...&#10;Technique 2: ... removes ..."></textarea>
+    <button class="rev-btn" onclick="tog('rp1_ms3')">Show Mark Scheme</button>
+    <div class="ms" id="rp1_ms3"><strong>✅</strong> Filtration — removes the excess (unreacted) copper oxide solid ✓.<br>Evaporation / crystallisation — removes the water to leave pure dry copper sulfate crystals ✓.</div>
+
+    <!-- RP2: Electrolysis -->
+    <h3>🔬 RP2 – Electrolysis of Aqueous Solutions <small>(Links to W8 Electrolysis)</small></h3>
+    <div class="info">
+      <strong>Aim:</strong> Investigate what is produced during the electrolysis of aqueous solutions using inert (carbon/graphite) electrodes.<br><br>
+      <strong>Method:</strong><br>
+      1. Pour the electrolyte solution (e.g. copper sulfate, sodium chloride) into a beaker.<br>
+      2. Place two <strong>inert electrodes</strong> (graphite or platinum) into the solution, connected to a DC power supply.<br>
+      3. Turn on the power supply and observe what happens at each electrode.<br>
+      4. Test any gases produced (e.g. squeaky pop for hydrogen, relights a glowing splint for oxygen, bleaches damp litmus paper for chlorine).<br><br>
+      <strong>Key results:</strong><br>
+      • Copper sulfate solution → copper deposited at cathode (brown coating), oxygen at anode (bubbles).<br>
+      • Sodium chloride solution (brine) → hydrogen at cathode (bubbles, squeaky pop), chlorine at anode (bubbles, bleaches litmus).
+    </div>
+
+    <p class="qn"><span class="mk">(1 mark)</span>(a) Why must the electrodes be inert (e.g. graphite)?</p>
+    <textarea class="abox" id="rp2_q1" placeholder="Your answer..."></textarea>
+    <button class="rev-btn" onclick="tog('rp2_ms1')">Show Mark Scheme</button>
+    <div class="ms" id="rp2_ms1"><strong>✅</strong> So the electrodes do not react with the electrolyte or the products ✓. This ensures only the ions in the solution are involved in the reaction.</div>
+
+    <p class="qn"><span class="mk">(3 marks)</span>(b) A student electrolyses copper sulfate solution. Describe what they would observe at each electrode and explain why copper forms at the cathode.</p>
+    <textarea class="abox" id="rp2_q2" style="min-height:65px" placeholder="Observations and explanation..."></textarea>
+    <button class="rev-btn" onclick="tog('rp2_ms2')">Show Mark Scheme</button>
+    <div class="ms" id="rp2_ms2"><strong>✅</strong> At the cathode: a brown/orange coating of copper forms ✓. At the anode: bubbles of gas (oxygen) are produced ✓. Copper forms at the cathode because copper is less reactive than hydrogen, so copper ions are discharged / reduced at the cathode instead of hydrogen ions ✓.</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(c) Describe the test for chlorine gas and state the result.</p>
+    <textarea class="abox" id="rp2_q3" placeholder="Test and result..."></textarea>
+    <button class="rev-btn" onclick="tog('rp2_ms3')">Show Mark Scheme</button>
+    <div class="ms" id="rp2_ms3"><strong>✅</strong> Hold damp (blue) litmus paper near the gas ✓. Chlorine bleaches the litmus paper white / decolourises it ✓.</div>
+
+    <!-- RP3: Rates -->
+    <h3>🔬 RP3 – Rates of Reaction: Effect of Concentration <small>(Links to W7 Rates)</small></h3>
+    <div class="info">
+      <strong>Aim:</strong> Investigate how changing the concentration of sodium thiosulfate affects the rate of reaction with hydrochloric acid.<br><br>
+      <strong>Method:</strong><br>
+      1. Draw a black cross on white paper. Place a conical flask on top of it.<br>
+      2. Measure a set volume of sodium thiosulfate solution at a known concentration. Add to the flask.<br>
+      3. Add a set volume of dilute hydrochloric acid and start the timer immediately.<br>
+      4. Look down through the flask from above. Stop the timer when the cross can no longer be seen (sulfur precipitate makes the solution cloudy).<br>
+      5. Repeat with different concentrations of sodium thiosulfate (dilute with water, keeping total volume the same).<br><br>
+      <strong>Independent variable:</strong> concentration of sodium thiosulfate<br>
+      <strong>Dependent variable:</strong> time for the cross to disappear<br>
+      <strong>Control variables:</strong> volume of solutions, concentration of HCl, temperature, same cross
+    </div>
+
+    <p class="qn"><span class="mk">(1 mark)</span>(a) Why is this experiment considered to have a subjective end point?</p>
+    <textarea class="abox" id="rp3_q1" placeholder="Your answer..."></textarea>
+    <button class="rev-btn" onclick="tog('rp3_ms1')">Show Mark Scheme</button>
+    <div class="ms" id="rp3_ms1"><strong>✅</strong> Different people may judge the point at which the cross disappears differently ✓. This makes the end point subjective / not precise / open to human error.</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(b) The student dilutes the sodium thiosulfate with water for each experiment. Why must the total volume of liquid always stay the same?</p>
+    <textarea class="abox" id="rp3_q2" placeholder="Your answer..."></textarea>
+    <button class="rev-btn" onclick="tog('rp3_ms2')">Show Mark Scheme</button>
+    <div class="ms" id="rp3_ms2"><strong>✅</strong> To keep it a fair test ✓. If the volume changed, the depth of liquid in the flask would change, which would affect how quickly the cross disappears — it would no longer be testing only the effect of concentration ✓.</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(c) The student's results show: 40 g/dm³ → 92 s, 30 g/dm³ → 128 s, 20 g/dm³ → 195 s, 10 g/dm³ → 410 s. Using collision theory, explain why a higher concentration leads to a faster reaction.</p>
+    <textarea class="abox" id="rp3_q3" style="min-height:55px" placeholder="Collision theory explanation..."></textarea>
+    <button class="rev-btn" onclick="tog('rp3_ms3')">Show Mark Scheme</button>
+    <div class="ms" id="rp3_ms3"><strong>✅</strong> Higher concentration means more particles of sodium thiosulfate in the same volume ✓. This leads to more frequent collisions between reactant particles, so more successful collisions per second / a higher rate of reaction ✓.</div>
+
+    <!-- RP4: Temperature Changes -->
+    <h3>🔬 RP4 – Temperature Changes in Reacting Solutions <small>(Exothermic &amp; Endothermic)</small></h3>
+    <div class="info">
+      <strong>Aim:</strong> Investigate the temperature change when an acid reacts with an alkali or a metal.<br><br>
+      <strong>Method:</strong><br>
+      1. Use a polystyrene cup as an insulating container (reduces heat loss).<br>
+      2. Measure a set volume of acid and record the starting temperature.<br>
+      3. Add the alkali (or metal powder) and stir with the thermometer.<br>
+      4. Record the highest (or lowest) temperature reached.<br>
+      5. Calculate temperature change = final temp − starting temp.<br><br>
+      <strong>Key terms:</strong><br>
+      • <strong>Exothermic</strong> = temperature increases → energy is <em>released</em> to the surroundings (e.g. neutralisation, combustion).<br>
+      • <strong>Endothermic</strong> = temperature decreases → energy is <em>taken in</em> from the surroundings (e.g. citric acid + sodium hydrogencarbonate, thermal decomposition).
+    </div>
+
+    <p class="qn"><span class="mk">(1 mark)</span>(a) Why is a polystyrene cup used instead of a glass beaker?</p>
+    <div id="mc_rp4a">
+      <div class="mcq-opt" onclick="mcq(this,'rp4a',false)"><div class="dot"></div>Glass would break if the reaction is vigorous</div>
+      <div class="mcq-opt" onclick="mcq(this,'rp4a',true)"><div class="dot"></div>Polystyrene is an insulator — it reduces heat loss to the surroundings</div>
+      <div class="mcq-opt" onclick="mcq(this,'rp4a',false)"><div class="dot"></div>Polystyrene is easier to read the temperature through</div>
+    </div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(b) A student adds magnesium to dilute hydrochloric acid in a polystyrene cup. The temperature rises from 21°C to 34°C. Is this reaction exothermic or endothermic? Explain your answer.</p>
+    <textarea class="abox" id="rp4_q2" placeholder="Exothermic/endothermic + explanation..."></textarea>
+    <button class="rev-btn" onclick="tog('rp4_ms2')">Show Mark Scheme</button>
+    <div class="ms" id="rp4_ms2"><strong>✅</strong> Exothermic ✓ because the temperature increased, which means energy was released / transferred to the surroundings ✓.</div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(c) Suggest two ways the student could improve the accuracy of the temperature change measured.</p>
+    <textarea class="abox" id="rp4_q3" placeholder="1.&#10;2."></textarea>
+    <button class="rev-btn" onclick="tog('rp4_ms3')">Show Mark Scheme</button>
+    <div class="ms" id="rp4_ms3"><strong>✅ Any two from:</strong> Use a lid on the polystyrene cup (reduces heat loss) ✓ | Use a more precise thermometer / datalogger (e.g. reads to 0.1°C) ✓ | Repeat the experiment and calculate a mean ✓ | Ensure the solutions are at the same starting temperature ✓</div>
+
+    <!-- RP5: Chromatography -->
+    <h3>🔬 RP5 – Chromatography <small>(Paper 2 — Separating &amp; Identifying Substances)</small></h3>
+    <div class="info">
+      <strong>Aim:</strong> Use paper chromatography to separate and identify substances in a mixture (e.g. food colourings or inks).<br><br>
+      <strong>Method:</strong><br>
+      1. Draw a <strong>pencil</strong> line (baseline) near the bottom of chromatography paper (pencil because it is insoluble and won't dissolve in the solvent).<br>
+      2. Place small spots of the mixtures and known reference dyes on the baseline.<br>
+      3. Lower the paper into the solvent — the solvent level must be <strong>below the baseline</strong> (otherwise the spots dissolve into the solvent).<br>
+      4. Allow the solvent to travel up the paper. Remove when the solvent is near the top.<br>
+      5. Mark the <strong>solvent front</strong> with a pencil line.<br>
+      6. Substances are identified by comparing the distance they travel to the reference spots, or by calculating <strong>Rf values</strong>.
+    </div>
+    <div class="formula">📐 <strong>Rf = distance moved by substance ÷ distance moved by solvent</strong><br>Rf values are always between 0 and 1 and have no units.</div>
+
+    <h3>✏️ Worked Example – Rf Calculation</h3>
+    <div class="worked">
+      <strong>Question:</strong> A spot of dye travels 3.6 cm. The solvent front travels 9.0 cm. Calculate the Rf value.<br>
+      <span class="step">Step 1:</span> Rf = distance moved by substance ÷ distance moved by solvent<br>
+      <span class="step">Step 2:</span> Rf = 3.6 ÷ 9.0 = <strong>0.40</strong>
+    </div>
+
+    <p class="qn"><span class="mk">(1 mark)</span>(a) Why must the baseline be drawn in pencil, not ink?</p>
+    <div id="mc_rp5a">
+      <div class="mcq-opt" onclick="mcq(this,'rp5a',false)"><div class="dot"></div>Pencil is easier to see</div>
+      <div class="mcq-opt" onclick="mcq(this,'rp5a',true)"><div class="dot"></div>Pencil is insoluble and won't dissolve in the solvent / won't move up the paper</div>
+      <div class="mcq-opt" onclick="mcq(this,'rp5a',false)"><div class="dot"></div>Pencil is darker than ink</div>
+    </div>
+
+    <p class="qn"><span class="mk">(1 mark)</span>(b) A substance produces only one spot on the chromatogram. What does this tell you?</p>
+    <div id="mc_rp5b">
+      <div class="mcq-opt" onclick="mcq(this,'rp5b',true)"><div class="dot"></div>The substance is a pure substance (only one component)</div>
+      <div class="mcq-opt" onclick="mcq(this,'rp5b',false)"><div class="dot"></div>The substance is a mixture of two dyes</div>
+    </div>
+
+    <p class="qn"><span class="mk">(2 marks)</span>(c) A spot of dye X travels 4.2 cm and the solvent front travels 7.0 cm. Calculate the Rf value. A reference table shows Dye A has Rf = 0.40 and Dye B has Rf = 0.60. Identify dye X.</p>
+    <textarea class="abox" id="rp5_q3" placeholder="Calculation and identification..."></textarea>
+    <button class="rev-btn" onclick="tog('rp5_ms3')">Show Mark Scheme</button>
+    <div class="ms" id="rp5_ms3"><strong>✅</strong> Rf = 4.2 ÷ 7.0 = <strong>0.60</strong> ✓<br>Dye X is <strong>Dye B</strong> (matching Rf = 0.60) ✓</div>
+  </div>
+</div>
+
+</main>
+<script>
+function show(id,btn){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+  if(btn)btn.classList.add('active');
+  else document.querySelectorAll('nav button').forEach(b=>{
+    const oc=b.getAttribute('onclick');
+    if(oc&&oc.includes("'"+id+"'"))b.classList.add('active');
+  });
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function tog(id){
+  const el=document.getElementById(id);
+  el.classList.toggle('show');
+  const btn=el.previousElementSibling;
+  btn.textContent=el.classList.contains('show')?'Hide Mark Scheme':'Show Mark Scheme';
+}
+const done={};
+function mcq(el,g,ok){
+  if(done[g])return;
+  done[g]=true;
+  el.classList.add(ok?'ok':'no');
+  if(!ok)el.parentElement.querySelectorAll('.mcq-opt').forEach(o=>{
+    if(o.getAttribute('onclick')&&o.getAttribute('onclick').includes(',true)'))o.classList.add('ok');
+  });
+}
+function checkT(tid){
+  const tbl=document.getElementById(tid);
+  const ins=tbl.querySelectorAll('input');
+  let c=0,f=0;
+  ins.forEach(i=>{
+    const a=i.dataset.ans.toLowerCase().replace(/\s+/g,'');
+    const v=i.value.trim().toLowerCase().replace(/\s+/g,'');
+    i.classList.remove('ok','no');
+    if(!v)return;
+    f++;
+    if(v===a){i.classList.add('ok');c++;}else i.classList.add('no');
+  });
+  const sc=document.getElementById(tid+'Sc');
+  if(sc&&f>0){sc.textContent=c+'/'+f+' correct';sc.style.color=c===f?'#2e7d32':'#c62828';}
+}
+</script>
+</body>
+</html>
